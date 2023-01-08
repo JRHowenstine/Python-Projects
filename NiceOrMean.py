@@ -13,6 +13,11 @@
 #           back to the calling function.
 
 
+from colorama import just_fix_windows_console
+from termcolor import colored
+just_fix_windows_console()
+
+
 
 
 def start(nice=0,mean=0,name=""): # Define default values
@@ -76,14 +81,13 @@ def score(nice,mean,name):
 
 def win(nice,mean,name):
     # Substitute the {} wildcards with our variable values
-    print("\nNice job {}, you win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name))
+    print(colored("\nNice job {}, you win! \nEveryone loves you and you've \nmade lots of friends along the way!".format(name),'green','on_blue'))
     # call again function and pass in our variables
     again(nice,mean,name)
     
 def lose(nice,mean,name):
     # Substitute the {} wildcards with our variable values
-    print("\nAhhh too bad, game over! \n{}, you live in a dirty beat-up \nvan by the river, wretched and alone!".format(name))
-    # call again function and pass in our variables
+    print(colored("\nAhhh too bad, game over! \n{}, you live in a dirty beat-up \nvan by the river, wretched and alone!".format(name),'yellow','on_red'))
     again(nice,mean,name)
 
 
