@@ -22,7 +22,7 @@ class User:
             print("The password or email is incorrect!")
 
 # Define child class one 
-class Customer(User)
+class Customer(User):
     # Define unique attributes for child class
     address = "No Address Provided"
     customerID = "000000"
@@ -40,7 +40,7 @@ class Customer(User)
         
 
 # Define child class two
-class Employee(User)
+class Employee(User):
     # Define unique attributes for child class
     employeeID = "0000"
     branchID = "00"
